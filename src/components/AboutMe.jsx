@@ -1,8 +1,34 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import  { useRef, useEffect, useState } from "react";
 
 function AboutMe() {
+
+  const containerRef = useRef(null);
+  const [isScrollable, setIsScrollable] = useState(false);
+
+  useEffect(() => {
+    const checkScrollable = () => {
+      if (containerRef.current) {
+        const { scrollHeight, clientHeight } = containerRef.current;
+        setIsScrollable(scrollHeight > clientHeight);
+      }
+    };
+
+    checkScrollable();
+    window.addEventListener("resize", checkScrollable);
+
+    return () => window.removeEventListener("resize", checkScrollable);
+  }, []);
+
+
   return (
+    <div
+    ref={containerRef}
+    className={`max-h-screen ${
+      isScrollable ? "overflow-y-auto" : "overflow-y-hidden"
+    } p-6`}
+  >
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-8 space-y-8 md:space-y-0 md:space-x-12 relative -top-12">
       {" "}
       {/* Picture Section */}
@@ -64,6 +90,8 @@ function AboutMe() {
           </a>
         </div>
       </div>
+    </div>
+    <div className="h-24" />
     </div>
   );
 }
