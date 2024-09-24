@@ -5,7 +5,6 @@ function AboutMe() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen p-8 space-y-8 md:space-y-0 md:space-x-12 relative -top-12">
       {" "}
-      {/* Moved higher */}
       {/* Picture Section */}
       <div className="md:w-1/3 flex flex-col items-center">
         <img

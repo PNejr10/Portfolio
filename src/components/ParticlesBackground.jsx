@@ -9,12 +9,10 @@ const ParticlesBackground = () => {
   const particlesLoaded = (container) => {
     console.log('Particles Loaded:', container);
 
-    // Ensure container has methods or properties to access particles
+
     if (container) {
-      // Check if the container object has the 'particles' or similar method
       console.log('Container methods:', Object.keys(container));
-      
-      // Use available methods or properties to get particle count
+    
       try {
         if (container.particles) {
           console.log(`Number of particles: ${container.particles._array.length}`);
@@ -37,12 +35,12 @@ const ParticlesBackground = () => {
       options={{
         background: {
           color: {
-            value: '#080b12',  // Dark background
+            value: '#080b12', 
           },
         },
         particles: {
           color: {
-            value: '#d1d1e9',  // Light color for particles
+            value: '#d1d1e9', 
           },
           links: {
             color: '#d1d1e9',
@@ -69,7 +67,7 @@ const ParticlesBackground = () => {
               enable: true,
               area: 800,
             },
-            value: 100,  // Ensure enough particles
+            value: 100, 
           },
           opacity: {
             value: 0.5,
@@ -80,10 +78,10 @@ const ParticlesBackground = () => {
             },
           },
           shape: {
-            type: 'star',  // Star shape for particles
+            type: 'star', 
           },
           size: {
-            value: { min: 10, max: 100 },  // Adjust size range
+            value: { min: 10, max: 100 },  
             animation: {
               enable: true,
               speed: 3,

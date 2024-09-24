@@ -1,4 +1,4 @@
-import '../index.css'; // or './styles.css'
+import '../index.css'; 
 
 const FallingStars = () => {
   const numberOfStars = 50;

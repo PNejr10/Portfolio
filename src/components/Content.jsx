@@ -4,7 +4,7 @@ import AboutMe from './AboutMe';
 import Experience from './Experience';
 import Projects from './Projects';
 import Connect from './Education';
-import Navbar from './Navbar';  // Import the Navbar
+import Navbar from './Navbar';  
 
 const sectionVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -13,13 +13,13 @@ const sectionVariants = {
 };
 
 function Content() {
-  const currentSection = useSelector((state) => state.section);  // Get current section from Redux
+  const currentSection = useSelector((state) => state.section); 
 
   return (
     <div className="relative min-h-screen bg-space-gradient text-starWhite">
-      <Navbar /> {/* Navbar at the top */}
+      <Navbar /> 
       <div className="container mx-auto p-8 relative z-10">
-        <AnimatePresence mode="wait">  {/* Update: Use mode="wait" */}
+        <AnimatePresence mode="wait">  
           {currentSection === 'about' && (
             <motion.div
               key="about"

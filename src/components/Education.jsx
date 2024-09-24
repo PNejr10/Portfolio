@@ -1,3 +1,4 @@
+import  { useRef, useEffect, useState } from "react";
 const educationData = [
   {
     school: "University of California, Davis",
@@ -31,7 +32,6 @@ const educationData = [
   },
 ];
 
-import  { useRef, useEffect, useState } from "react";
 
 function Education() {
   const containerRef = useRef(null);
