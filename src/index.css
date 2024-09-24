@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles.css */
+/* index.css or styles.css */
+
+/* index.css or styles.css */
+
+@keyframes bounceFall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(calc(50vh - 10px));
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(calc(100vh + 50px));
+    opacity: 0;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #d1d1e9;
+  border-radius: 50%;
+  animation: bounceFall linear infinite;
+}
+
+/* Planet styling */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f39c12; /* Orange planet */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  opacity: 0;
+  animation: movePlanet 20s linear infinite;
+}
+
+/* Keyframes for planet movement */
+@keyframes movePlanet {
+  0% {
+    transform: translateX(-100px) translateY(50vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110vw) translateY(40vh);
+    opacity: 0;
+  }
+}
+
+/* Additional planets with random sizes and delays */
+.planet-1 {
+  width: 80px;
+  height: 80px;
+  background-color: #3498db; /* Blue planet */
+  animation-delay: 5s;
+  animation-duration: 25s;
+}
+
+.planet-2 {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c; /* Red planet */
+  animation-delay: 10s;
+  animation-duration: 30s;
+}
+
+.planet-3 {
+  width: 60px;
+  height: 60px;
+  background-color: #f1c40f; /* Yellow planet */
+  animation-delay: 15s;
+  animation-duration: 35s;
+}
