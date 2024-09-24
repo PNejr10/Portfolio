@@ -1,4 +1,3 @@
-// ParticleBackground.jsx
 import Particles from 'react-tsparticles';
 
 const ParticlesBackground = () => {
@@ -59,7 +58,7 @@ const ParticlesBackground = () => {
               default: 'out',
             },
             random: false,
-            speed: 1,
+            speed: 5,
             straight: false,
           },
           number: {
@@ -67,13 +66,13 @@ const ParticlesBackground = () => {
               enable: true,
               area: 800,
             },
-            value: 100, 
+            value: 200, 
           },
           opacity: {
             value: 0.5,
             animation: {
               enable: true,
-              speed: 1,
+              speed: 5,
               minimumValue: 0.1,
             },
           },
@@ -81,11 +80,11 @@ const ParticlesBackground = () => {
             type: 'star', 
           },
           size: {
-            value: { min: 10, max: 100 },  
+            value: { min: 50, max: 1000 },  
             animation: {
               enable: true,
-              speed: 3,
-              minimumValue: 3,
+              speed: 10,
+              minimumValue: 10,
             },
           },
         },
